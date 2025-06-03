@@ -15,20 +15,23 @@ return [
     |
     */
 
-    'paths' => ['api/*', 'sanctum/csrf-cookie', 'signin','getSession'],
+
+    'paths' => ['api/*', 'sanctum/csrf-cookie'],
 
     'allowed_methods' => ['*'],
 
-    'allowed_origins' => ['*'],
+    'allowed_origins' => ['https://skill-match-fe.vercel.app'],
 
     'allowed_origins_patterns' => [],
 
     'allowed_headers' => ['*'],
 
-    'exposed_headers' => ['*'],
+    'exposed_headers' => [],
 
-    'max_age' => 86400, // 1 day for preflight cache
+    'max_age' => 0,
 
-    'supports_credentials' => false,
+    'supports_credentials' => true,
+
+
 
 ];
