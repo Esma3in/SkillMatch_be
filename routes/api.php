@@ -59,10 +59,17 @@ Route::options('/{any}', function () {
 })->where('any', '.*');
 
 Route::middleware(['web', 'api'])->group(function () {
-    
+
 });
 //
+Route::options("/signUp", function () {
+    return response()->json([], 200);
+});
 Route::post('/signUp', [UserController::class, 'SignUp']);
+
+Route::options("/signin", function () {
+    return response()->json([], 200);
+});
 Route::post('/signin', [UserController::class, 'SignIn']);
 Route::get('/getCookie',[UserController::class,'getCookie']);
 //reset password
